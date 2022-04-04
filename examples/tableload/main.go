@@ -7,10 +7,10 @@ import (
 	"os"
 	"time"
 
-	eosws "github.com/dfuse-io/eosws-go"
+	eosws "github.com/invisible-train-40/eosws-go"
 )
 
-var dfuse_endpoint = "wss://mainnet.eos.dfuse.io/v1/stream"
+var dfuse_endpoint = "wss://mainnet.zsw.dfuse.io/v1/stream"
 var origin = "https://origin.example.com"
 
 func main() {
@@ -37,8 +37,8 @@ func main() {
 		ga.Fetch = true
 		ga.WithProgress = 5
 		ga.Data.JSON = true
-		ga.Data.Code = "eosio.token"
-		ga.Data.Scope = "eosio"
+		ga.Data.Code = "zswhq.token"
+		ga.Data.Scope = "zswhq"
 		ga.Data.Table = "accounts"
 
 		fmt.Println("Sending `get_table_rows` message")

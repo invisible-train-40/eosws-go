@@ -12,7 +12,7 @@ Websocket consumer for the https://dfuse.io API on EOS networks.
     }
     time.AfterFunc(time.Until(exp), log.Println("JWT is now expired, renew it before reconnecting client")) // make sure that you handle updating your JWT
 
-	client, err := eosws.New("wss://mainnet.eos.dfuse.io/v1/stream", jwt, "https://origin.example.com")
+	client, err := eosws.New("wss://mainnet.zsw.dfuse.io/v1/stream", jwt, "https://origin.example.com")
     if err != nil {
         log.Fatalf("cannot connect to dfuse endpoint: %s", err.Error())
     }
@@ -28,7 +28,7 @@ Websocket consumer for the https://dfuse.io API on EOS networks.
 			Listen:     true,
 		}
 	}
-	ga.Data.Accounts = "eosio"
+	ga.Data.Accounts = "zswhq"
 	ga.Data.ActionNames = "onblock"
 	err = client.Send(ga)
 	if err != nil {

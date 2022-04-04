@@ -3,7 +3,7 @@ package eosws
 import (
 	"encoding/json"
 
-	v1 "github.com/dfuse-io/eosws-go/mdl/v1"
+	v1 "github.com/invisible-train-40/eosws-go/mdl/v1"
 )
 
 func init() {

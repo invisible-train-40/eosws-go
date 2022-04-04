@@ -6,10 +6,10 @@ import (
 	"os"
 	"time"
 
-	eosws "github.com/dfuse-io/eosws-go"
+	eosws "github.com/invisible-train-40/eosws-go"
 )
 
-var dfuse_endpoint = "wss://mainnet.eos.dfuse.io/v1/stream"
+var dfuse_endpoint = "wss://mainnet.zsw.dfuse.io/v1/stream"
 var origin = "https://origin.example.com"
 
 func main() {
@@ -35,7 +35,7 @@ func main() {
 		ga.Listen = true
 		ga.WithProgress = 5
 		ga.IrreversibleOnly = true
-		ga.Data.Accounts = "eosio.token"
+		ga.Data.Accounts = "zswhq.token"
 		ga.Data.ActionNames = "transfer"
 		ga.Data.WithInlineTraces = true
 
